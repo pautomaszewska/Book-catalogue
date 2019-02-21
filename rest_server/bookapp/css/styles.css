@@ -1,0 +1,55 @@
+.position {
+    font-weight: bold;
+}
+
+.add-book label {
+    margin:0 0 3px 0;
+	padding:0;
+	display:block;
+    width: 100%;
+
+}
+.add-book {
+    margin: 50px auto;
+    max-width: 300px;
+    padding: 30px;
+    /*box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);*/
+	border-radius: 5px;
+	border: 5px solid #5ebab1;
+
+}
+
+.add-book input {
+    padding: 0;
+    display: block;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    width: 95%;
+}
+
+.add-book select {
+    padding: 0;
+    display: block;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    width: 100%;
+
+}
+
+.add-book button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+.position:hover {
+ cursor: context-menu;
+}
+
+.delete {
+    font-weight: lighter;
+    display: inline-block;
+    margin: 5px;
+}
