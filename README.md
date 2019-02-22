@@ -3,7 +3,7 @@
 ### General info
 Front-end client created for cataloguing books.
 
- ![tekst alternatywny](.images/main.png)
+ ![main](./images/main.png)
 
 ### Technologies
 * jQuery 3.3.1
