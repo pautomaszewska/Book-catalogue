@@ -41,15 +41,15 @@ $(document).ready( function () {
                         var edit = $('<p>Edytuj</p>').addClass('edit');
 
                         var editform = $("<label>Tytuł</label>"
-                        + "<input type='text' id='title'>"
+                        + "<input type='text' id='title1'>"
                         + "<label>Autor</label>"
-                        + "<input type='text' id='author'>"
+                        + "<input type='text' id='author1'>"
                         + "<label>ISBN</label>"
-                        + "<input type='number' id='isbn'>"
+                        + "<input type='number' id='isbn1'>"
                         + "<label>Wydawca</label>"
-                        + "<input type='text' id='publisher'>"
+                        + "<input type='text' id='publisher1'>"
                         + "<label>Gatunek</label>"
-                        + "<select id='genre'>"
+                        + "<select id='genre1'>"
                            + "<option value='1'>Romans</option>"
                             + "<option value='2'>Obyczajowa</option>"
                             + "<option value='3'>Sci-fi i fantasy</option>"
@@ -70,16 +70,16 @@ $(document).ready( function () {
                          $('.edit').find('button').on('click', function (event) {
                               event.preventDefault();
                               var bookinfo = {
-                                    title: editform.find('#title').val(),
-                                    author: editform.find('#author').val(),
-                                    isbn: editform.find('#isbn').val(),
-                                    publisher: editform.find('#publisher').val(),
-                                    genre: editform.find('#genre').val()};
+                                    title: $('#title1').val(),
+                                    author: $('#author1').val(),
+                                    isbn: $('#isbn1').val(),
+                                    publisher: $('#publisher1').val(),
+                                    genre: $('#genre1').val()};
                             var editBook = function () {
                                 alert('Dane zostały zmienione');
                                 location.reload(true);
                             };
-                            callAjax((baseUrl + id), bookinfo, "PUT", editBook());
+                            callAjax((baseUrl + id), bookinfo, "PUT", editBook);
                          });
                 };
                     callAjax((baseUrl + id), {}, "GET", bookDetails);
@@ -87,10 +87,10 @@ $(document).ready( function () {
             });
 
             del.on('click',function () {
-            var id = $(this).parent().attr('id');
-            var deleteBook = function () {
-                alert('Usunięto wybraną książkę');
-                location.reload(true)
+                var id = $(this).parent().attr('id');
+                var deleteBook = function () {
+                    alert('Usunięto wybraną książkę');
+                    location.reload(true)
             };
             callAjax((baseUrl + id), {}, "DELETE", deleteBook());
             });
